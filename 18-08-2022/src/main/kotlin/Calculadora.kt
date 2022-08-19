@@ -1,7 +1,6 @@
 fun calcular(escolha: Int): Any {
         return when(escolha){
 
-
             1 -> {
                 var total = 0
                 print("Digite o primeiro número: ")
@@ -46,8 +45,11 @@ fun calcular(escolha: Int): Any {
 
                 println("O resultado da soma é $total")
             }
+            5 ->{
 
-            5 -> {
+            }
+
+            6 -> {
                 println("Fechando calculadora...")
 
             }
