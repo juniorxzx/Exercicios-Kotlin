@@ -1,7 +1,10 @@
+
 val produto = mutableListOf<String>()
 
+fun getListProduto(): MutableList<String> {
+    return produto
+}
 fun cadastrar(nome: String) {
-
         if (nome != "") {
             produto.add(nome)
             println("($nome): adicionado com sucesso!")
@@ -9,8 +12,6 @@ fun cadastrar(nome: String) {
             println("Valor Inválido")
         }
     }
-
-
 fun remover(){
 
     while (true){
@@ -26,7 +27,6 @@ fun remover(){
         }
     }
 }
-
 fun atualizar(){
     println("Digite o nome do produto que deseja atualizar")
     val nome = readln()
@@ -38,7 +38,6 @@ fun atualizar(){
         println("Produto atualizado com sucesso!")
     }
 }
-
 fun mostrar(){
     println()
     println(produto)

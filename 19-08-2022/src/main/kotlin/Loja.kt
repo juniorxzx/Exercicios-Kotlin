@@ -1,5 +1,6 @@
 fun main(){
 
+
     while(true){
         print("APP DE GERENCIAMENTO DE LOJA\n" +
                 "1 - Cadastrar produto\n" +

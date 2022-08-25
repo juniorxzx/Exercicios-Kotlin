@@ -6,8 +6,7 @@ class Cliente (
     var telefone: String
 ){
 
-    private val listaDeCompras = mutableListOf<String>()
-
+    private val _listaDeCompras = mutableListOf<String>()
 
     init{
         if(nome.isBlank()){
@@ -15,18 +14,22 @@ class Cliente (
         }
     }
 
+    fun getCliente(): MutableList<String> {
+        return this._listaDeCompras
+    }
+
     fun adicionarItem(compra: String){
 
         if(compra.isNotBlank()){
-            listaDeCompras.add(compra)
+            _listaDeCompras.add(compra)
         }else{
             print("Produto inválido!")
         }
     }
 
     fun removerItem(compra: String){
-        if(listaDeCompras.contains(compra)){
-            listaDeCompras.remove(compra)
+        if(_listaDeCompras.contains(compra)){
+            _listaDeCompras.remove(compra)
         }else{
             print("Produto inválido!")
         }
@@ -34,7 +37,7 @@ class Cliente (
 
     fun exibirProdutos (){
         println("~~~~~~~~Lista de compras~~~~~~~~\n")
-        listaDeCompras.forEach {
+        _listaDeCompras.forEach {
             println(it)
         }
     }
